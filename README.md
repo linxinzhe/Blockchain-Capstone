@@ -2,6 +2,13 @@
 
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
+# Run
+```
+ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+npm run compile
+npm run test-erc721
+```
+
 # ZoKrates
 ```
 docker run -v ~/github/Blockchain-Capstone/zokrates/code:/home/zokrates/code -ti zokrates/zokrates /bin/bash

@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "truffle compile",
+    "test-erc721": "truffle test ./test/TestERC721Mintable.js",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +18,8 @@
   "dependencies": {
     "openzeppelin-solidity": "^2.2.0",
     "solc": "^0.5.2",
-    "solc-js": "^0.5.2"
+    "solc-js": "^0.5.2",
+    "truffle": "^5.0.2",
+    "truffle-hdwallet-provider": "^1.0.2"
   }
 }

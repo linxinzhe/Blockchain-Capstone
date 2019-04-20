@@ -158,6 +158,7 @@ contract ERC721 is Pausable, ERC165 {
 
     //    @dev Approves another address to transfer the given token ID
     function approve(address to, uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
 
         // TODO require the given address to not be the owner of the tokenId
         require(to != owner,"require the given address to not be the owner of the tokenId" );
@@ -544,7 +545,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 
 contract RealEstateERC721Token is ERC721Metadata("Real Estate","RE","https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/"){
 
-    function mint(address to,uint tokenId,string tokenURI) public onlyOwner returns(bool){
+    function mint(address to,uint tokenId,string memory tokenURI) public onlyOwner returns(bool){
         super._mint(to,tokenId);
         super.setTokenURI(tokenId);
         return true;
