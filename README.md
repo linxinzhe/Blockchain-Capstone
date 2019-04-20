@@ -2,6 +2,17 @@
 
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
+# ZoKrates
+```
+docker run -v ~/github/Blockchain-Capstone/zokrates/code:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+cd code/square
+~/zokrates compile -i square.code
+~/zokrates setup
+~/zokrates compute-witness -a 3 9
+~/zokrates generate-proof
+~/zokrates export-verifier
+```
+
 # Project Resources
 
 * [Remix - Solidity IDE](https://remix.ethereum.org/)
