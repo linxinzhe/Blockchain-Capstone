@@ -2,7 +2,7 @@
 let squareVerifier = artifacts.require('SquareVerifier');
 
 // - use the contents from proof.json generated from zokrates steps
-let correctproof = require('../zokrates/code/square/proof');
+let proof = require('../zokrates/code/square/proof');
 
 contract('TestSquareVerifier', accounts => {
 
@@ -14,13 +14,13 @@ contract('TestSquareVerifier', accounts => {
         });
 
         it('verification with correct proof', async function () {
-            let verified = await this.contract.verifyTx.call(correctproof.proof.A,correctproof.proof.A_p,correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,correctproof.proof.K,correctproof.input,{from:account_one});
+            let verified = await this.contract.verifyTx.call(proof.proof.A,proof.proof.A_p,proof.proof.B,proof.proof.B_p,proof.proof.C,proof.proof.C_p,proof.proof.H,proof.proof.K,proof.input,{from:account_one});
             assert.equal(verified, true, "verification is correct");
         });
 
         it('Test verification with incorrect proof', async function () {
-            correctproof.input = [10, 1];
-            let verified = await this.contract.verifyTx.call(correctproof.proof.A,correctproof.proof.A_p,correctproof.proof.B,correctproof.proof.B_p,correctproof.proof.C,correctproof.proof.C_p,correctproof.proof.H,correctproof.proof.K,correctproof.input,{from:account_one});
+            proof.input = [10, 1];
+            let verified = await this.contract.verifyTx.call(proof.proof.A,proof.proof.A_p,proof.proof.B,proof.proof.B_p,proof.proof.C,proof.proof.C_p,proof.proof.H,proof.proof.K,proof.input,{from:account_one});
             assert.equal(verified, false, "verification is correct");
         })
     })

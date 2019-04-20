@@ -2,11 +2,13 @@
 
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
 
-# Run
+# Testing
 ```
 ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 npm run compile
 npm run test-erc721
+npm run test-square-verifier
+npm run test-soln-square-verifier
 ```
 
 # ZoKrates
