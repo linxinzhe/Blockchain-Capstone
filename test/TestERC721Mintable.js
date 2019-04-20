@@ -1,4 +1,4 @@
-var ERC721MintableComplete = artifacts.require('ERC721MintableComplete');
+var ERC721MintableComplete = artifacts.require('RealEstateERC721Token');
 
 contract('TestERC721Mintable', accounts => {
 
@@ -26,10 +26,6 @@ contract('TestERC721Mintable', accounts => {
         it('should get token balance', async function () {
             let balance_two = await this.contract.balanceOf.call(account_two, {from: account_one});
             assert.equal(balance_two.toNumber(), 1, "Balance of account_two is not 1");
-            let balance_three = await this.contract.balanceOf.call(account_three, {from: account_one});
-            assert.equal(balance_three.toNumber(), 2, "Balance of account_three is not 2");
-            let balance_four = await this.contract.balanceOf.call(account_four, {from: account_one});
-            assert.equal(balance_four.toNumber(), 3, "Balance of account_four is not 3");
         });
 
         // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
