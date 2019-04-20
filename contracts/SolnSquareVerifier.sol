@@ -5,9 +5,9 @@ import "./ERC721Mintable.sol";
 import "./Verifier.sol";
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
+contract SquareVerifier is Verifier {
 
-
-
+}
 // TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class
 
 
@@ -33,8 +33,6 @@ import "./Verifier.sol";
 // TODO Create a function to mint new NFT only after the solution has been verified
 //  - make sure the solution is unique (has not been used before)
 //  - make sure you handle metadata as well as tokenSuplly
-
-  
 
 
 

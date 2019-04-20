@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "truffle compile",
     "test-erc721": "truffle test ./test/TestERC721Mintable.js",
+    "test-square-verifier": "truffle test ./test/TestSquareVerifier.js",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
