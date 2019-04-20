@@ -38,14 +38,30 @@ cd code/square
 Deploy result
 ```
    Deploying 'SquareVerifier'
-   > contract address:    0x48f564377bd8Cb144e2D2EdF65bA4542D3c9B123
+   > contract address:    0x3f0DDd99ea6c8026bE34463aae6Aa621f39fE60D
 
    Deploying 'SolnSquareVerifier'
-   > contract address:    0x76A04e504CF05950d5e0F5c2B1922d7611f181DC
+   > contract address:    0x598535260F85fE7E5DdB729c9a8248dF7f7FaC2e
 
 ```
 
-##### Deployment Log 
+## Mint token
+1. Go to [Remix - Solidity IDE](https://remix.ethereum.org/)
+2. Choose injected web3 and copy contract address to "At address"
+3. Mint 10 token according to proof.json and tokenid is from 1 to 10
+
+## Project Resources
+
+* [Remix - Solidity IDE](https://remix.ethereum.org/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Truffle Framework](https://truffleframework.com/)
+* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
+* [Open Zeppelin ](https://openzeppelin.org/)
+* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
+* [Docker](https://docs.docker.com/install/)
+* [ZoKrates](https://github.com/Zokrates/ZoKrates)
+
+### Deployment Log
 ```
 /usr/local/bin/node /usr/local/lib/node_modules/npm/bin/npm-cli.js run deploy --scripts-prepend-node-path=auto
 
@@ -57,7 +73,6 @@ Compiling ./contracts/Migrations.sol...
 Compiling ./contracts/Oraclize.sol...
 Compiling ./contracts/SolnSquareVerifier.sol...
 Compiling ./contracts/Verifier.sol...
-Compiling ./contracts/verifier.sol...
 Compiling openzeppelin-solidity/contracts/drafts/Counters.sol...
 Compiling openzeppelin-solidity/contracts/math/SafeMath.sol...
 Compiling openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol...
@@ -79,16 +94,16 @@ Migrations dry-run (simulation)
 ===============================
 > Network name:    'rinkeby-fork'
 > Network id:      4
-> Block gas limit: 7006834
+> Block gas limit: 7002635
 
 
 1_initial_migration.js
 ======================
 
-   Deploying 'Migrations'
+   Replacing 'Migrations'
    ----------------------
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.994898275
+   > balance:             2.919014656
    > gas used:            258162
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -101,20 +116,20 @@ Migrations dry-run (simulation)
 2_deploy_contracts.js
 =====================
 
-   Deploying 'SquareVerifier'
+   Replacing 'SquareVerifier'
    --------------------------
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.976880575
+   > balance:             2.900996956
    > gas used:            1774742
    > gas price:           10 gwei
    > value sent:          0 ETH
    > total cost:          0.01774742 ETH
 
 
-   Deploying 'SolnSquareVerifier'
+   Replacing 'SolnSquareVerifier'
    ------------------------------
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.929980125
+   > balance:             2.854096506
    > gas used:            4690045
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -137,19 +152,19 @@ Starting migrations...
 ======================
 > Network name:    'rinkeby'
 > Network id:      4
-> Block gas limit: 7006834
+> Block gas limit: 6996225
 
 
 1_initial_migration.js
 ======================
 
-   Deploying 'Migrations'
+   Replacing 'Migrations'
    ----------------------
-   > transaction hash:    0x4d5df4eeed14998e64b69ce562adf24a4ad2ed74d071f7b8da022de9e64017f0
-   > Blocks: 0            Seconds: 13
-   > contract address:    0xB6d4D7Fe9756677Ae5B4b4EE01159155655940f0
+   > transaction hash:    0xe014267dd6cb43a8c7f81a012192539b192e36fe98c864ce3517d6971adad1c3
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x7F1Eb78b81432F2Ef710BC77f9761347C4922e2C
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.994748275
+   > balance:             2.918864656
    > gas used:            273162
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -165,26 +180,26 @@ Starting migrations...
 2_deploy_contracts.js
 =====================
 
-   Deploying 'SquareVerifier'
+   Replacing 'SquareVerifier'
    --------------------------
-   > transaction hash:    0xc180c5bfbf74ae0edb862ef27b8b4828d7e056b2af63eb3acdf5865e8c056166
-   > Blocks: 1            Seconds: 19
-   > contract address:    0x48f564377bd8Cb144e2D2EdF65bA4542D3c9B123
+   > transaction hash:    0xf603e23d6f647771c02d2df0f57970e6437489d3ef56b3ab1099c79a435302b3
+   > Blocks: 2            Seconds: 28
+   > contract address:    0x3f0DDd99ea6c8026bE34463aae6Aa621f39fE60D
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.976580575
+   > balance:             2.900696956
    > gas used:            1774742
    > gas price:           10 gwei
    > value sent:          0 ETH
    > total cost:          0.01774742 ETH
 
 
-   Deploying 'SolnSquareVerifier'
+   Replacing 'SolnSquareVerifier'
    ------------------------------
-   > transaction hash:    0x38ed7b56400e5cc8ed88d848737ef27cc9585d44ca44a17f659cd84d0c63e0ff
-   > Blocks: 2            Seconds: 20
-   > contract address:    0x76A04e504CF05950d5e0F5c2B1922d7611f181DC
+   > transaction hash:    0xf73e1b98afbf80df78bea4286e9515a52d89d336c739e590c34a2302b00dcc35
+   > Blocks: 1            Seconds: 14
+   > contract address:    0x598535260F85fE7E5DdB729c9a8248dF7f7FaC2e
    > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
-   > balance:             2.928078125
+   > balance:             2.852194506
    > gas used:            4850245
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -204,17 +219,4 @@ Summary
 
 
 Process finished with exit code 0
-
-
 ```
-
-## Project Resources
-
-* [Remix - Solidity IDE](https://remix.ethereum.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Truffle Framework](https://truffleframework.com/)
-* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
-* [Open Zeppelin ](https://openzeppelin.org/)
-* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
-* [Docker](https://docs.docker.com/install/)
-* [ZoKrates](https://github.com/Zokrates/ZoKrates)
