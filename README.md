@@ -48,6 +48,8 @@ Deploy result
 
 ```
 
+Contract ABI (xxxxx.json) located in build/contracts
+
 ## Mint token
 1. Go to [Remix - Solidity IDE](https://remix.ethereum.org/)
 2. Choose injected web3 and copy contract address to "At address"
