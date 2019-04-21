@@ -59,7 +59,8 @@ Result:
 Total Supply: 10 RE https://rinkeby.etherscan.io/token/0x846eF385549Ee30165eD2B51f8437EE41dEfb99A
 
 ## Opensea storefront
-
+1. My storefront is on https://rinkeby.opensea.io/assets/realestatev26
+2. tokenid from 1001 to 1005 is brought by 0xf17f52151EbEF6C7334FAD080c5704D77216b732 https://rinkeby.opensea.io/recent/realestatev26
 
 ## Project Resources
 
