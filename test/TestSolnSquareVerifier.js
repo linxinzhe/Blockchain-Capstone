@@ -13,18 +13,14 @@ contract('TestSolnSquareVerifier', accounts => {
     });
 
     it('Test if a new solution can be added for contract - SolnSquareVerifier', async function () {
-        let canAdd = true;
-        try {
-            await this.contract.IsMintable(account_two, 2,
-                proof.proof.A, proof.proof.A_p,
-                proof.proof.B, proof.proof.B_p,
-                proof.proof.C, proof.proof.C_p,
-                proof.proof.H, proof.proof.K, proof.input,
-                {from: account_one});
-        } catch (e) {
-            canAdd = false;
-        }
-        assert.equal(canAdd, true, "Solution cannot be added");
+        let result = await this.contract.IsMintable(account_two, 2,
+            proof.proof.A, proof.proof.A_p,
+            proof.proof.B, proof.proof.B_p,
+            proof.proof.C, proof.proof.C_p,
+            proof.proof.H, proof.proof.K, proof.input,
+            {from: account_one});
+
+        assert.equal(result.logs[0].event, "SolutionAdded", 'could not add a solution');
     });
 
     it('Test if an ERC721 token can be minted for contract - SolnSquareVerifier', async function () {
